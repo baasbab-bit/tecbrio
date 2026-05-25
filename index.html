@@ -80,6 +80,484 @@
   }
 }
 
+
+/* MOBILE: DO NOT KEEP SEARCH/FILTER BAR STICKY */
+@media (max-width: 700px) {
+  .toolbar {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
+    box-shadow: none !important;
+  }
+
+  .category-chips-wrap {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+
+/* MODERN ELECTRONICS UI V1 */
+:root{
+  --bg:#F5F7FA;
+  --surface:#FFFFFF;
+  --surface2:#F8FAFC;
+  --text:#0F172A;
+  --muted:#64748B;
+  --line:#E5E7EB;
+  --accent:#2563EB;
+  --theme:#0F172A;
+  --ok:#16A34A;
+  --warn:#F59E0B;
+  --danger:#DC2626;
+  --shadow-sm:0 8px 22px rgba(15,23,42,.06);
+  --shadow-md:0 18px 48px rgba(15,23,42,.12);
+}
+
+body{
+  background:
+    radial-gradient(circle at 20% -10%, rgba(37,99,235,.08), transparent 32%),
+    var(--bg) !important;
+  color:var(--text) !important;
+}
+
+header{
+  background:linear-gradient(135deg,#0F172A,#111827 52%,#1E293B) !important;
+  border-bottom:none !important;
+  padding:24px 16px 30px !important;
+}
+
+h1{
+  font-weight:800 !important;
+  letter-spacing:-.04em !important;
+}
+
+.subtitle{
+  max-width:680px;
+  color:#CBD5E1 !important;
+}
+
+.toolbar{
+  position:static !important;
+  background:rgba(255,255,255,.82) !important;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(226,232,240,.75) !important;
+  box-shadow:none !important;
+}
+
+.toolbar-grid input,
+.toolbar-grid select{
+  border:1px solid rgba(203,213,225,.78) !important;
+  background:#FFFFFF !important;
+  box-shadow:0 1px 0 rgba(15,23,42,.02);
+}
+
+.chip{
+  border:none !important;
+  background:#FFFFFF !important;
+  color:#475569 !important;
+  box-shadow:0 6px 18px rgba(15,23,42,.06);
+  font-weight:800 !important;
+}
+
+.chip.active{
+  background:#0F172A !important;
+  color:#FFFFFF !important;
+  box-shadow:0 10px 28px rgba(15,23,42,.18),0 0 0 3px rgba(37,99,235,.12) !important;
+}
+
+.stats{
+  color:#64748B !important;
+  font-weight:700;
+}
+
+.grid{
+  gap:16px !important;
+}
+
+.card{
+  border:1px solid rgba(226,232,240,.72) !important;
+  border-radius:22px !important;
+  background:rgba(255,255,255,.94) !important;
+  box-shadow:var(--shadow-sm) !important;
+  overflow:hidden !important;
+  transform:translateZ(0);
+}
+
+.card:hover{
+  transform:translateY(-3px) !important;
+  box-shadow:var(--shadow-md) !important;
+}
+
+.imgbox{
+  background:
+    radial-gradient(circle at 50% 18%, #FFFFFF 0%, #F1F5F9 54%, #E8EDF4 100%) !important;
+  aspect-ratio:1 / 1 !important;
+  padding:10px !important;
+}
+
+.imgbox img{
+  object-fit:contain !important;
+  filter:drop-shadow(0 14px 22px rgba(15,23,42,.10));
+  transform:scale(.94);
+}
+
+.content{
+  padding:13px !important;
+  gap:7px !important;
+}
+
+.category{
+  font-size:10px !important;
+  color:#64748B !important;
+  letter-spacing:.08em !important;
+}
+
+.title{
+  font-size:15px !important;
+  line-height:1.18 !important;
+  font-weight:750 !important;
+  letter-spacing:-.025em !important;
+  min-height:36px !important;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.desc{
+  display:none !important;
+}
+
+.specs{
+  gap:5px !important;
+  min-height:0 !important;
+}
+
+.spec{
+  background:#F1F5F9 !important;
+  border:none !important;
+  color:#475569 !important;
+  font-size:10px !important;
+  padding:5px 7px !important;
+}
+
+.price{
+  font-size:18px !important;
+  letter-spacing:-.04em !important;
+  color:#0F172A !important;
+}
+
+.badge{
+  border:none !important;
+  font-size:10px !important;
+  padding:5px 7px !important;
+  background:#DCFCE7 !important;
+  color:#15803D !important;
+}
+
+.badge.low{background:#FEF3C7 !important;color:#B45309 !important}
+.badge.sold{background:#FEE2E2 !important;color:#B91C1C !important}
+
+.ribbons{
+  top:10px !important;
+  left:10px !important;
+}
+
+.ribbon{
+  border-radius:999px !important;
+  padding:6px 8px !important;
+  font-size:9px !important;
+  box-shadow:0 10px 22px rgba(15,23,42,.14) !important;
+}
+
+.actions .btn,
+.card .btn{
+  border-radius:13px !important;
+  background:#0F172A !important;
+  min-height:42px !important;
+  font-size:13px !important;
+  letter-spacing:-.01em;
+}
+
+.cartbar{
+  background:rgba(255,255,255,.94) !important;
+  backdrop-filter:blur(18px);
+  border-top:1px solid rgba(226,232,240,.9) !important;
+  box-shadow:0 -16px 42px rgba(15,23,42,.10) !important;
+}
+
+.cart-inner{
+  border-radius:20px;
+}
+
+.whatsapp{
+  border-radius:14px !important;
+  min-height:46px;
+}
+
+/* Product bottom sheet */
+.modal-overlay{
+  align-items:flex-end !important;
+  justify-content:center !important;
+  padding:0 !important;
+  background:rgba(15,23,42,.56) !important;
+  backdrop-filter:blur(4px);
+}
+
+.modal-box{
+  width:min(100vw,860px) !important;
+  max-height:92vh !important;
+  border-radius:30px 30px 0 0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  box-shadow:0 -22px 70px rgba(15,23,42,.30) !important;
+  animation:sheetUp .22s ease-out both;
+}
+
+@keyframes sheetUp{
+  from{transform:translateY(24px);opacity:.92}
+  to{transform:translateY(0);opacity:1}
+}
+
+.product-sheet{
+  max-height:92vh;
+  overflow:auto;
+  background:#FFFFFF;
+}
+
+.sheet-hero{
+  position:relative;
+  background:linear-gradient(180deg,#F8FAFC,#EEF2F7);
+  padding:18px 18px 20px;
+}
+
+.sheet-close{
+  position:absolute;
+  right:16px;
+  top:14px;
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 10px 28px rgba(15,23,42,.10);
+  font-size:22px;
+  line-height:1;
+  z-index:2;
+}
+
+.sheet-image-wrap{
+  width:100%;
+  display:grid;
+  place-items:center;
+  min-height:260px;
+  padding:24px 8px 12px;
+}
+
+.sheet-image{
+  max-width:min(360px,82vw);
+  width:100%;
+  max-height:360px;
+  object-fit:contain;
+  filter:drop-shadow(0 20px 30px rgba(15,23,42,.13));
+}
+
+.sheet-body{
+  padding:20px 18px 110px;
+}
+
+.sheet-kicker{
+  color:#64748B;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:7px;
+}
+
+.sheet-title{
+  margin:0;
+  font-size:28px;
+  line-height:1.03;
+  letter-spacing:-.055em;
+  font-weight:800;
+}
+
+.sheet-desc{
+  color:#475569;
+  line-height:1.5;
+  font-size:14px;
+  margin:12px 0 14px;
+}
+
+.sheet-specs{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.sheet-section-title{
+  font-size:16px;
+  margin:18px 0 10px;
+  letter-spacing:-.025em;
+}
+
+.variant-modern{
+  border:1px solid #E5E7EB;
+  border-radius:18px;
+  padding:13px;
+  margin:9px 0;
+  background:#FFFFFF;
+  box-shadow:0 8px 20px rgba(15,23,42,.045);
+}
+
+.variant-modern.sold{
+  opacity:.58;
+}
+
+.variant-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.variant-name{
+  font-weight:800 !important;
+  font-size:15px !important;
+  letter-spacing:-.025em;
+}
+
+.variant-meta{
+  color:#64748B !important;
+  font-size:12px !important;
+  line-height:1.35;
+}
+
+.variant-price{
+  font-size:18px;
+  font-weight:850;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+}
+
+.variant-controls{
+  display:grid;
+  grid-template-columns:118px 1fr;
+  gap:10px;
+  align-items:center;
+  margin-top:12px;
+}
+
+.qty-stepper{
+  display:grid;
+  grid-template-columns:34px 1fr 34px;
+  align-items:center;
+  border:1px solid #E2E8F0;
+  border-radius:14px;
+  overflow:hidden;
+  min-height:40px;
+  background:#F8FAFC;
+}
+
+.qty-stepper button{
+  border:none;
+  background:#FFFFFF;
+  min-height:40px;
+  font-weight:900;
+  font-size:17px;
+}
+
+.qty-stepper input{
+  border:none !important;
+  background:transparent !important;
+  text-align:center;
+  padding:0 !important;
+  min-width:0;
+  font-weight:800;
+}
+
+.add-modern{
+  border:none;
+  background:#2563EB;
+  color:white;
+  border-radius:14px;
+  min-height:42px;
+  font-weight:900;
+}
+
+.add-modern:disabled{
+  opacity:.5;
+}
+
+.sheet-sticky{
+  position:sticky;
+  bottom:0;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(18px);
+  border-top:1px solid #E5E7EB;
+  padding:12px 18px calc(12px + env(safe-area-inset-bottom));
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.sheet-sticky .mini{
+  color:#64748B;
+  font-size:12px;
+  font-weight:800;
+}
+
+.sheet-sticky strong{
+  display:block;
+  font-size:18px;
+  letter-spacing:-.04em;
+}
+
+/* Mobile polish */
+@media(max-width:700px){
+  header{padding:20px 14px 24px !important}
+  h1{font-size:24px !important}
+  main{padding:14px 8px 120px !important}
+  .toolbar{padding:10px 8px !important}
+  .toolbar-grid{grid-template-columns:1fr !important;gap:8px !important}
+  .grid,#grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:8px !important;
+  }
+  .card{border-radius:16px !important}
+  .imgbox{padding:6px !important}
+  .content{padding:7px !important;gap:5px !important}
+  .category{font-size:8px !important}
+  .title{
+    font-size:10.5px !important;
+    min-height:26px !important;
+    line-height:1.2 !important;
+  }
+  .specs{display:none !important}
+  .row{display:grid !important;gap:3px !important;align-items:start !important}
+  .price{font-size:11.5px !important}
+  .badge{font-size:8px !important;padding:3px 5px !important;width:fit-content}
+  .actions .btn,.card .btn{
+    min-height:31px !important;
+    border-radius:10px !important;
+    font-size:9px !important;
+    padding:6px 4px !important;
+  }
+  .ribbon{font-size:8px !important;padding:4px 6px !important}
+  .cartbar{padding:9px 8px !important}
+  .cart-inner{gap:8px !important}
+  .cart-info{font-size:12px !important}
+  .sheet-title{font-size:24px}
+  .sheet-image-wrap{min-height:230px}
+  .sheet-body{padding:18px 16px 104px}
+  .variant-controls{grid-template-columns:106px 1fr}
+  .add-modern{font-size:13px}
+}
+
 </style>
 </head>
 <body>
@@ -90,7 +568,7 @@
 <div class="cartbar"><div class="cart-inner"><div class="cart-info"><strong id="cartCount">0 items</strong> · <span id="cartTotal">SRD 0</span></div><button class="btn-soft" onclick="openCart()">View Cart</button><button class="whatsapp" onclick="openCart()">Checkout WhatsApp</button></div></div>
 <div id="toast" class="toast"></div>
 <script>
-const CATALOG_API_URL = 'https://script.google.com/macros/s/AKfycbzsXy8qj0UWmid2K-3MOl-dAT7jYjuRKY5Iw4Q0EoY7rA2b_l87-cBbeBiYFwY4hY851A/exec'; // Paste Apps Script web app /exec URL here if hosted outside Apps Script.
+const CATALOG_API_URL = 'https://script.google.com/macros/s/AKfycbzsXy8qj0UWmid2K-3MOl-dAT7jYjuRKY5Iw4Q0EoY7rA2b_l87-cBbeBiYFwY4hY851A/exec';
 const state = {data:null, products:[], filtered:[], category:'', brand:'', search:'', cart:{}};
 function apiUrl(params){ const base = CATALOG_API_URL || location.href.split('?')[0]; const u = new URL(base); Object.keys(params||{}).forEach(k=>u.searchParams.set(k, params[k])); u.searchParams.set('_', Date.now()); return u.toString(); }
 function jsonp(params){ return new Promise((resolve,reject)=>{ const cb='cb_'+Date.now()+'_'+Math.random().toString(36).slice(2); window[cb]=d=>{delete window[cb]; s.remove(); resolve(d)}; const s=document.createElement('script'); s.src=apiUrl({...params, callback:cb}); s.onerror=()=>reject(new Error('Could not load API')); document.body.appendChild(s); }); }
@@ -117,9 +595,83 @@ function filter(){ let p=[...state.products]; if(state.category)p=p.filter(x=>x.
 function statusClass(s){ return s==='Sold Out'?'sold':(s==='Low Stock'?'low':''); }
 function specsHtml(specs){ return String(specs||'').split(/[•,|;]/).map(x=>x.trim()).filter(Boolean).slice(0,4).map(x=>`<span class="spec">${esc(x)}</span>`).join(''); }
 function ribbons(p){ return `<div class="ribbons">${p.featured?'<span class="ribbon r-featured">Featured</span>':''}${p.new?'<span class="ribbon r-new">New</span>':''}${p.hot?'<span class="ribbon r-hot">Popular</span>':''}${p.sale?'<span class="ribbon r-sale">Deal</span>':''}</div>`; }
-function card(p){ return `<article class="card">${ribbons(p)}<div class="imgbox">${p.imageUrl?`<img src="${esc(p.imageUrl)}" loading="lazy">`:'<div class="noimg">No image</div>'}</div><div class="content"><div class="category">${esc(p.category)}${p.subcategory?' / '+esc(p.subcategory):''}</div><div class="title">${esc([p.brand,p.productName].filter(Boolean).join(' '))}</div><div class="desc">${esc(p.description||'Tap to view available models, prices, warranty and stock.')}</div><div class="specs">${specsHtml(p.specs)}</div><div class="row"><div class="price">${money(p.minPrice)}</div><span class="badge ${statusClass(p.stockStatus)}">${esc(p.stockStatus)}</span></div><div class="actions"><button class="btn" onclick="openProduct('${esc(p.productId)}')">View Options</button></div></div></article>`; }
+function card(p){
+  const name=[p.brand,p.productName].filter(Boolean).join(' ');
+  const sub=p.subcategory?' / '+p.subcategory:'';
+  return `<article class="card" onclick="openProduct('${esc(p.productId)}')">
+    ${ribbons(p)}
+    <div class="imgbox">${p.imageUrl?`<img src="${esc(p.imageUrl)}" loading="lazy" alt="${esc(name)}">`:'<div class="noimg">No image</div>'}</div>
+    <div class="content">
+      <div class="category">${esc(p.category)}${esc(sub)}</div>
+      <div class="title">${esc(name)}</div>
+      <div class="desc">${esc(p.description||'Tap to view available models, prices, warranty and stock.')}</div>
+      <div class="specs">${specsHtml(p.specs)}</div>
+      <div class="row"><div class="price">${money(p.minPrice)}</div><span class="badge ${statusClass(p.stockStatus)}">${esc(p.stockStatus)}</span></div>
+      <div class="actions"><button class="btn" onclick="event.stopPropagation();openProduct('${esc(p.productId)}')">View</button></div>
+    </div>
+  </article>`;
+}
 function render(){ document.getElementById('stats').textContent=`${state.filtered.length} products shown · ${state.products.length} total`; document.getElementById('grid').innerHTML=state.filtered.length?state.filtered.map(card).join(''):'<div class="empty">No products found.</div>'; }
-function openProduct(id){ const p=state.products.find(x=>x.productId===id); if(!p)return; const vars=(p.variants||[]).map(v=>`<div class="variant-row"><div><div class="variant-name">${esc([v.variant,v.color].filter(Boolean).join(' / ')||v.sku)}</div><div class="variant-meta">SKU: ${esc(v.sku)} · ${esc(v.condition)} · Warranty: ${esc(v.warranty||'-')} · ${esc(v.stockStatus)} (${v.stockAvailable||0})</div></div><strong>${money(v.retailPrice)}</strong><input class="qty" type="number" min="1" value="1" id="qty_${esc(v.variantId)}"></div><button class="btn" ${v.stockAvailable<=0?'disabled':''} onclick="addToCart('${esc(p.productId)}','${esc(v.variantId)}')">Add ${esc(v.sku)}</button>`).join(''); const modal=document.createElement('div'); modal.className='modal-overlay'; modal.innerHTML=`<div class="modal-box"><div class="modal-head"><div><h2>${esc([p.brand,p.productName].filter(Boolean).join(' '))}</h2><div class="variant-meta">${esc(p.category)}${p.subcategory?' / '+esc(p.subcategory):''}</div></div><button class="xbtn" onclick="this.closest('.modal-overlay').remove()">×</button></div><div class="preview-layout"><img class="preview-image" src="${esc(p.imageUrl||'')}" onerror="this.style.display='none'"><div><p>${esc(p.description||'')}</p><div class="specs">${specsHtml(p.specs)}</div><h3>Available options</h3>${vars||'<div class="empty">No active variants.</div>'}</div></div></div>`; document.body.appendChild(modal); }
+
+function adjustQty(id,delta){
+  const el=document.getElementById('qty_'+id);
+  if(!el)return;
+  const next=Math.max(1,Number(el.value||1)+delta);
+  el.value=next;
+}
+
+function openProduct(id){
+  const p=state.products.find(x=>x.productId===id);
+  if(!p)return;
+  const variants=p.variants||[];
+  const min=variants.length?Math.min(...variants.map(v=>Number(v.retailPrice||0)).filter(n=>!isNaN(n))):p.minPrice;
+  const vars=variants.map(v=>{
+    const label=[v.variant,v.color].filter(Boolean).join(' / ')||v.sku;
+    const sold=Number(v.stockAvailable||0)<=0;
+    return `<div class="variant-modern ${sold?'sold':''}">
+      <div class="variant-top">
+        <div>
+          <div class="variant-name">${esc(label)}</div>
+          <div class="variant-meta">SKU: ${esc(v.sku)} · ${esc(v.condition||'New')} · Warranty: ${esc(v.warranty||'-')} · ${esc(v.stockStatus)} (${v.stockAvailable||0})</div>
+        </div>
+        <div class="variant-price">${money(v.retailPrice)}</div>
+      </div>
+      <div class="variant-controls">
+        <div class="qty-stepper">
+          <button onclick="adjustQty('${esc(v.variantId)}',-1)">−</button>
+          <input type="number" min="1" value="1" id="qty_${esc(v.variantId)}">
+          <button onclick="adjustQty('${esc(v.variantId)}',1)">+</button>
+        </div>
+        <button class="add-modern" ${sold?'disabled':''} onclick="addToCart('${esc(p.productId)}','${esc(v.variantId)}')">${sold?'Sold Out':'Add to Cart'}</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  const modal=document.createElement('div');
+  modal.className='modal-overlay';
+  modal.innerHTML=`<div class="modal-box">
+    <div class="product-sheet">
+      <div class="sheet-hero">
+        <button class="sheet-close" onclick="this.closest('.modal-overlay').remove()">×</button>
+        <div class="sheet-image-wrap">${p.imageUrl?`<img class="sheet-image" src="${esc(p.imageUrl)}" alt="${esc([p.brand,p.productName].filter(Boolean).join(' '))}">`:'<div class="noimg">No image</div>'}</div>
+      </div>
+      <div class="sheet-body">
+        <div class="sheet-kicker">${esc(p.category)}${p.subcategory?' / '+esc(p.subcategory):''}</div>
+        <h2 class="sheet-title">${esc([p.brand,p.productName].filter(Boolean).join(' '))}</h2>
+        ${p.description?`<p class="sheet-desc">${esc(p.description)}</p>`:''}
+        <div class="sheet-specs">${specsHtml(p.specs)}</div>
+        <h3 class="sheet-section-title">Available options</h3>
+        ${vars||'<div class="empty">No active variants.</div>'}
+      </div>
+      <div class="sheet-sticky">
+        <div><span class="mini">Starting from</span><strong>${money(min)}</strong></div>
+        <button class="whatsapp" onclick="this.closest('.modal-overlay').remove();openCart();">View Cart</button>
+      </div>
+    </div>
+  </div>`;
+  modal.addEventListener('click',e=>{ if(e.target===modal) modal.remove(); });
+  document.body.appendChild(modal);
+}
 function addToCart(pid,vid){ const p=state.products.find(x=>x.productId===pid); const v=p?.variants?.find(x=>x.variantId===vid); if(!p||!v)return; const qty=Math.max(1,Number(document.getElementById('qty_'+vid)?.value||1)); const key=vid; if(!state.cart[key]) state.cart[key]={...v, brand:p.brand, productName:p.productName, category:p.category, qty:0}; state.cart[key].qty+=qty; updateCart(); showToast('Added to cart'); }
 function updateCart(){ const items=Object.values(state.cart); const count=items.reduce((s,i)=>s+i.qty,0); const total=items.reduce((s,i)=>s+i.qty*displayPrice(i.retailPrice),0); document.getElementById('cartCount').textContent=count+' item'+(count===1?'':'s'); document.getElementById('cartTotal').textContent=moneyDisplay(total); }
 function openCart(){ const items=Object.values(state.cart); const total=items.reduce((s,i)=>s+i.qty*displayPrice(i.retailPrice),0); const d=document.createElement('div'); d.className='drawer-overlay'; d.innerHTML=`<div class="drawer"><div class="drawer-head"><div><h2>Your Cart</h2><div class="variant-meta">${items.length} selected · ${moneyDisplay(total)}</div></div><button class="xbtn" onclick="this.closest('.drawer-overlay').remove()">×</button></div>${items.length?items.map(i=>`<div class="cart-line"><div class="cart-line-title">${esc(i.brand)} ${esc(i.productName)}</div><div class="variant-meta">${esc(i.variant)} ${esc(i.color)} · SKU ${esc(i.sku)}</div><div class="row"><span>Qty ${i.qty} × ${money(i.retailPrice)}</span><strong>${moneyDisplay(i.qty*displayPrice(i.retailPrice))}</strong></div><button class="btn-soft" onclick="removeCart('${esc(i.variantId)}');this.closest('.drawer-overlay').remove();openCart();">Remove</button></div>`).join(''):'<div class="empty">Cart is empty.</div>'}<div class="form"><label>Name<input id="custName"></label><label>Phone<input id="custPhone"></label><label>Address / Notes<textarea id="custAddress" rows="3"></textarea></label><button class="whatsapp" ${!items.length?'disabled':''} onclick="checkoutWhatsApp()">Send WhatsApp Order</button><button class="btn-soft" onclick="clearCart();this.closest('.drawer-overlay').remove();">Clear Cart</button></div></div>`; document.body.appendChild(d); }
