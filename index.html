@@ -16,7 +16,7 @@
 <div class="cartbar"><div class="cart-inner"><div class="cart-info"><strong id="cartCount">0 items</strong> · <span id="cartTotal">SRD 0</span></div><button class="btn-soft" onclick="openCart()">View Cart</button><button class="whatsapp" onclick="openCart()">Checkout WhatsApp</button></div></div>
 <div id="toast" class="toast"></div>
 <script>
-const CATALOG_API_URL = ''; // Paste Apps Script web app /exec URL here if hosted outside Apps Script.
+const CATALOG_API_URL = 'https://script.google.com/macros/s/AKfycbzsXy8qj0UWmid2K-3MOl-dAT7jYjuRKY5Iw4Q0EoY7rA2b_l87-cBbeBiYFwY4hY851A/exec'; // Paste Apps Script web app /exec URL here if hosted outside Apps Script.
 const state = {data:null, products:[], filtered:[], category:'', brand:'', search:'', cart:{}};
 function apiUrl(params){ const base = CATALOG_API_URL || location.href.split('?')[0]; const u = new URL(base); Object.keys(params||{}).forEach(k=>u.searchParams.set(k, params[k])); u.searchParams.set('_', Date.now()); return u.toString(); }
 function jsonp(params){ return new Promise((resolve,reject)=>{ const cb='cb_'+Date.now()+'_'+Math.random().toString(36).slice(2); window[cb]=d=>{delete window[cb]; s.remove(); resolve(d)}; const s=document.createElement('script'); s.src=apiUrl({...params, callback:cb}); s.onerror=()=>reject(new Error('Could not load API')); document.body.appendChild(s); }); }
